@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
-    <title>layout02</title>
+    <title>메인</title>
     <style>
-        #wrap {
-            width: 540px;
-            height: 1000px;
-            margin: 0 auto;
-            font-size: 20px;
-            color: #fff;
-            text-align: center;
-        }
-
-        #header {
-            width: 1920px;
-            height: 100px;
-            background-color: #fa9ecd;
-            line-height: 100px;
-        }
-
-        #nav {
-            width: 960px;
-            height: 100px;
-            background-color: #a5e064;
-            line-height: 100px;
-        }
-
-        #side_left {
-            float: left;
-            width: 300px;
-            height: 700px;
-            background-color: #388A5A;
-            line-height: 700px;
-        }
-
-        #contents {
-            float: left;
-            width: 360px;
-            height: 700px;
-            background-color: #FBC73B;
-            line-height: 700px;
-        }
-
-        #side_right {
-            float: left;
-            width: 300px;
-            height: 700px;
-            background-color: #388A5A;
-            line-height: 700px;
-        }
-
-        #footer {
-            clear: both;
-            width: 960px;
-            height: 100px;
-            background-color: #F06060;
-            line-height: 100px;
-        }
+        #wrap {width: 100%; height: 100%; margin: 0 ; font-size: 30px; color:#fff; text-align: center; text-transform: uppercase;}
+        .header {width: 1920px; height: 100px; line-height: 100px; background: #ef6c00;}
+        .nav {float: left; width: 250px; height: 2410px; line-height: 600px; background: #fb8c00; word-break:break-all;}
+        .content1 {float: left; width: 1070px; height: 600px; line-height: 600px; background: pink; word-break:break-all;}
+        .aside {float: left; width: 600px; height: 2410px; line-height: 600px; background: blue; word-break:break-all;}
+        .article1 {float: left; width: 1070px; height: 440px; line-height: 600px; background: rgb(242, 126, 255); word-break:break-all;}
+        .article2 {float: left; width: 1070px; height: 370px; line-height: 600px; background: rgb(108, 186, 231); word-break:break-all;}
+        .article3 {float: left; width: 1070px; height: 380px; line-height: 600px; background: rgb(233, 205, 210); word-break:break-all;}
+        .article4 {float: left; width: 1070px; height: 350px; line-height: 600px; background: rgb(245, 207, 255); word-break:break-all;}
+        .article5 {float: left; width: 1070px; height: 250px; line-height: 600px; background: rgb(233, 205, 210); word-break:break-all;}
+        .article6 {float: left; width: 1070px; height: 620px; line-height: 600px; background: rgb(189, 249, 217); word-break:break-all;}
+        .footer {clear: both; width: 1920px; height: 100px; line-height: 100px; background: #ffb74d;}
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
     </style>
 </head>
-
 <body>
     <div id="wrap">
-        <div id="header">HEADER</div>
-        <div id="nav">NAV</div>
-        <div id="side_left">SIDE_LEFT</div>
-        <div id="contents">CONTENTS</div>
-        <div id="side_right">SIDE_RIGHT</div>
-        <div id="footer">FOOTER</div>
+        <body topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0">
+        <div class="header">header</div>
+        <div class="nav">nav
+            <div>
+                메인 공연 스포츠 미술 대관정보 예술정보 대학로 공지사항 마이페이지 예매확인/취소 고객센터
+            </div>
+        </div>
+        <div class="content1">
+            <article class="article1">박스오피스</article>
+            <article class="article2">TODAY HOT</article>
+            <article class="article3">이 주의 공연/전시</article>
+            <article class="article4">문화 알리미</article>
+            <article class="article5">빠른 스포츠예매
+                <div>2022 프로야구 정규시즌 예매하기▶</div>
+                <div>2022 프로축구 정규시즌 예매하기▶</div>
+                <div>2021-2022 프로농구 정규시즌 예매하기▶</div>
+            </article>
+            <article class="article6">공연장
+                <div>남도소리울림터</div> 
+                <div>장흥문화예술회관</div> 
+                <div>보성군문화예술회관</div>
+                <div>광양시문화예술회관 대공연장</div>
+            </article>
+        </div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
     </div>
 </body>
 </html>
