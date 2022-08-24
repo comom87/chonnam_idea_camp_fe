@@ -2,93 +2,205 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>상세정보</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
+    <title>Navigator</title>
     <style>
-        #wrap {width: 100%; height: 100%; margin: 0 ; font-size: 30px; color:#fff; text-align: center; text-transform: uppercase;}
-        .header {width: 1920px; height: 100px; line-height: 100px; background: #ef6c00;}
-        .nav {float: left; width: 250px; height: 2410px; line-height: 600px; background: #fb8c00; word-break:break-all;}
-        .content1 {float: left; width: 1070px; height: 600px; line-height: 600px; background: pink; word-break:break-all;}
-        .aside {float: left; width: 600px; height: 2410px; line-height: 600px; background: blue; word-break:break-all;}
-        .article1 {float: left; width: 1070px; height: 180px; line-height: 40px; background: rgb(242, 126, 255); word-break:break-all;}
-        .article2 {float: left; width: 1070px; height: 700px; line-height: 20px; background: rgb(108, 186, 231); word-break:break-all;}
-        .article3 {float: left; width: 1070px; height: 380px; line-height: 600px; background: rgb(233, 205, 210); word-break:break-all;}
-        .article4 {float: left; width: 1070px; height: 350px; line-height: 600px; background: rgb(245, 207, 255); word-break:break-all;}
-        .article5 {float: left; width: 1070px; height: 250px; line-height: 600px; background: rgb(233, 205, 210); word-break:break-all;}
-        .article6 {float: left; width: 1070px; height: 620px; line-height: 600px; background: rgb(189, 249, 217); word-break:break-all;}
-        .footer {clear: both; width: 1920px; height: 100px; line-height: 100px; background: #ffb74d;}
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-          }
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Amiko', sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav {
+            padding-left: 1%;
+            background: #FFFFFF;
+            width: 15%;
+            position: fixed;
+        }
+
+        .menu {
+            padding: 100px 0px 0px 23px;
+            color: #737373; 
+        }
+
+        .nav a p {
+            color: #737373; 
+            font-weight: bold;
+        }
+
+        .nav a {
+            display:flex;
+            align-items: center;
+            width: fit-content;
+            flex-wrap: wrap;
+        }
+
+        .nav a img {
+            width: 50px;
+        }
+
+        .nav hr {
+            border: 0px;
+            width: 65%;
+            height: 3px;
+            background: #F1F1F1;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            background: #FFFFFF;
+        }
+        
+        .logo img {
+            width: 150px;
+            height: 75px;
+            margin-left: 20px;
+        }
+
+        .search {
+            margin-right: 15px;
+            padding: 0px 5px 0px 10px;
+            border-radius: 15px;
+            background-color: #F1F1F1;
+        }
+
+        .search input {
+            width: 450px;
+            height: 45px;
+            border: 0px;
+            outline: 0px;
+            background-color: transparent;
+        }
+
+        .search img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .alarm img {
+           width: 75px;
+           height: 75px;
+        }
+
+        .content-article {
+            width: 70%;
+            padding-top: 20px;
+            padding-left: 17%;
+            padding-right: 2%;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
+
 <body>
-  <div class="content-article-wrapper">
-    <div class="content-article">
-        <article class="category-title-content">
-          <div class="category-info-wrapper">
-            <p class="category-info">
-              <a href="#">미술</a>
-            </p>
-            <p></p>
-          </div>
-          <div class="title-info-wrapper">
-            <p class="big-title-info">Title</p>
-          </div>
-          <hr>
-        </article>
-        <article class="detail-content">
-          <div class="info-wrapper-left">
-            <div class="detail-info-wrapper">
-              <div class="poster-imgbox">
-                <img src="#">
-              </div>
+    <header class="header">
+        <div class="logo header">
+            <a href="#header"><img src="icon/logo.png"></a>
+        </div>
+        <div class="search header">
+            <input type="search">
+            <img src="icon/search.png">
+        </div>
+        <div class="alarm header">
+            <img src="icon/alarm.png">
+        </div>
+    </header>
+    <div class="nav">
+      <p class="menu">Menu</p>
+      <a href="#main"><img src="icon/main_off.png"><p>메인</p></a>
+      <a href="#performance"><img src="icon/ticket_off.png"><p>공연</p></a>
+      <!-- <div class="dropdown-container">
+          <a href="#musical"><p>뮤지컬</p></a>
+          <a href="#theater"><p>연극</p></a>
+          <a href="#concert"><p>콘서트</p></a>
+          <a href="#classic"><p>클래식/무용</p></a>
+          <a href="#family"><p>아동/가족</p></a>
+      </div> -->
+      <a href="#sports"><img src="icon/sport_off.png"><p>스포츠</p></a>
+      <a href="#art"><img src="icon/art_off.png"><p>미술</p></a>
+      <a href="#rent"><img src="icon/rent_off.png"><p>대관정보</p></a>
+      <a href="#artinfo"><img src="icon/info_off.png"><p>예술정보</p></a>
+      <a href="#local"><img src="icon/local_off.png"><p>대학로</p></a>
+      <a href="#annoucement"><img src="icon/announce_off.png"><p>공지사항</p></a>
+      <a href="#total"><img src="icon/total_off.png"><p>전체보기</p></a>
+      <hr>
+      <a href="#mypage"><img src="icon/myinfo_off.png"><p>마이페이지</p></a>
+      <a href="#bookcheck"><img src="icon/bookcheck_off.png"><p>예매확인/취소</p></a>
+      <a href="#help"><img src="icon/help_off.png"><p>고객센터</p></a>
+    </div>
+    <div class="content-article-wrapper">
+      <div class="content-article">
+          <article class="category-title-content">
+            <div class="category-info-wrapper">
+              <p class="category-info">
+                <a href="#">미술</a>
+              </p>
+              <p></p>
             </div>
-            <div class="social-icon-wrapper">
-              <span class="facebook-icon">
-                <img src="#">
-              </span>
-              <span class="twitter-icon">
-                <img src="#">
-              </span>
-            </div>
-          </div>
-          <div class="info-wrapper-middle">
-            <div class="show-info1">
-              <dl>
-                <dt>제목 </dt>
-                <dd>temp title</dd>
-                <dt>장소</dt>
-                <dd>temp region</dd>
-                <dt>기간</dt>
-                <dd>temp date</dd>
-                <dt>관람시간</dt>
-                <dd>runtime</dd>
-              </dl>
+            <div class="title-info-wrapper">
+              <p class="big-title-info">Title</p>
             </div>
             <hr>
-            <div class="show-info2">
-              <dl>
-                <dt>가격</dt>
-                <dd>
-                  <dl>
-                    <dt>최저 가격</dt>
-                    <dd>0원</dd>
-                    <dt>최고 가격</dt>
-                    <dd>100000000원</dd>
-                  </dl>
-                </dd>
-              </dl>
+          </article>
+          <article class="detail-content">
+            <div class="info-wrapper-left">
+              <div class="detail-info-wrapper">
+                <div class="poster-imgbox">
+                  <img src="#">
+                </div>
+              </div>
+              <div class="social-icon-wrapper">
+                <span class="facebook-icon">
+                  <img src="#">
+                </span>
+                <span class="twitter-icon">
+                  <img src="#">
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="info-wrapper-right">
-            <a href="#" class="ticker-redirect">예매하기</a>
-          </div>
-        </article>
-        <article class="imgbox-content">사진</article>
+            <div class="info-wrapper-middle">
+              <div class="show-info1">
+                <dl>
+                  <dt>제목 </dt>
+                  <dd>temp title</dd>
+                  <dt>장소</dt>
+                  <dd>temp region</dd>
+                  <dt>기간</dt>
+                  <dd>temp date</dd>
+                  <dt>관람시간</dt>
+                  <dd>runtime</dd>
+                </dl>
+              </div>
+              <hr>
+              <div class="show-info2">
+                <dl>
+                  <dt>가격</dt>
+                  <dd>
+                    <dl>
+                      <dt>최저 가격</dt>
+                      <dd>0원</dd>
+                      <dt>최고 가격</dt>
+                      <dd>100000000원</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="info-wrapper-right">
+              <a href="#" class="ticker-redirect">예매하기</a>
+            </div>
+          </article>
+          <article class="imgbox-content">사진</article>
+      </div>
     </div>
-  </div>
 </body>
 </html>
