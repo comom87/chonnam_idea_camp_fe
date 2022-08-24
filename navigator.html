@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
     <title>Navigator</title>
     <style>
-        body {
-            font-family: "Lato", sans-serif;
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Amiko', sans-serif;
+            color: black;
+            text-decoration: none;
         }
 
-        /* Fixed sidenav, full height */
-        .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
+        .nav
 
         /* Style the sidenav links and the dropdown button */
         .sidenav a,
@@ -87,72 +83,27 @@
 </head>
 
 <body>
-
-    <div class="sidenav">
-        <a href="#main">메인</a>
-
-        <button class="dropdown-btn">공연
-            <i class="fa fa-caret-down"></i>
-        </button>
+    <div class="nav">
+        <p>Menu</p>
+        <a href="#main"><img src="icon/main_off.png">메인</a>
+        <button class="dropdown-btn"><img src="icon/ticket_off.png">공연</button>
         <div class="dropdown-container">
-            <a href="#">뮤지컬</a>
-            <a href="#">연극</a>
-            <a href="#">콘서트</a>
-            <a href="#">클래식/무용</a>
-            <a href="#">아동/가족</a>
+            <a href="#musical">뮤지컬</a>
+            <a href="#theater">연극</a>
+            <a href="#concert">콘서트</a>
+            <a href="#classic">클래식/무용</a>
+            <a href="#family">아동/가족</a>
         </div>
-
-
-
-        <a href="#sports">스포츠</a>
-        <a href="#art">미술</a>
-        <a href="#placeinfo">대관정보</a>
-        <a href="#artinfo">예술정보</a>
-        <a href="#univ">대학로</a>
-
-        <div class="Frame-9"></div>
-            
-        
-        <a href="#notice">공지사항</a>
-        <a href="#mypage">마이페이지</a>
-        <a href="#check">예매확인/취소</a>
-        <a href="#cs">고객센터</a>
-
-        <!-- <button class="dropdown-btn">Dropdown
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-    </div> -->
-
-    <div class="main">
-        <h2>Sidebar Dropdown</h2>
-        <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
-        <p>This sidebar is of full height (100%) and always shown.</p>
-        <p>Some random text..</p>
+        <a href="#sports"><img src="icon/sport_off.png">스포츠</a>
+        <a href="#art"><img src="icon/art_off.png">미술</a>
+        <a href="#rent"><img src="icon/rent_off.png">대관정보</a>
+        <a href="#artinfo"><img src="icon/info_off.png">예술정보</a>
+        <a href="#local"><img src="icon/local_off.png">대학로</a>
+        <a href="#annoucement"><img src="icon/announce_off.png">공지사항</a>
+        <a href="#total"><img src="icon/total_off.png">전체보기</a>
+        <a href="#mypage"><img src="icon/myinfo_off.png">마이페이지</a>
+        <a href="#bookcheck"><img src="icon/bookcheck_off.png">예매확인/취소</a>
+        <a href="#help"><img src="icon/help_off.png">고객센터</a>
     </div>
-
-    <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
-
 </body>
-
 </html>
