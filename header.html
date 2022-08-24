@@ -1,25 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: static;
+            background: #FFFFFF;
+        }
+        
+        .logo img {
+            width: 150px;
+            height: 75px;
+            margin-left: 20px;
+        }
+
+        .search {
+            margin-right: 15px;
+            padding: 0px 5px 0px 10px;
+            border-radius: 15px;
+            background-color: #F1F1F1;
+        }
+
+        .search input {
+            width: 450px;
+            height: 20px;
+            border: 0px;
+            outline: 0px;
+            background-color: transparent;
+        }
+
+        .search img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .alarm img {
+           width: 75px;
+           height: 75px;
+        }
+
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <a href="#">
-                <h1>LOGO</h1>
-            </a>
+        <div class="logo header">
+            <a href="#header"><img src="icon/logo.png"></a>
         </div>
-        <div class="search">
-            <form>
-                <input type="text" name="serach_blank"></input>
-                <input type="submit">
-            </form>
+        <div class="search header">
+            <input type="text">
+            <img src="icon/search.png">
         </div>
-        <div class="alarm">
-            <button type="button"><img src="">알람</button>
+        <div class="alarm header">
+            <img src="icon/alarm.png">
         </div>
     </header>
 </body>
