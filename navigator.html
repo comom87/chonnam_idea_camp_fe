@@ -17,95 +17,65 @@
         }
 
         .nav {
-            back
+            padding-left: 1%;
+            background: #FFFFFF;
+            width: 15%;
+            /* position: fixed; */
         }
 
-        /* Style the sidenav links and the dropdown button */
-        .sidenav a,
-        .dropdown-btn {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            border: none;
-            background: none;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
+        .menu {
+            padding: 100px 0px 0px 23px;
+            color: #737373; 
         }
 
-        /* On mouse-over */
-        .sidenav a:hover,
-        .dropdown-btn:hover {
-            color: #f1f1f1;
+        .nav a p {
+            color: #737373; 
+            font-weight: bold;
         }
 
-        /* Main content */
-        .main {
-            margin-left: 200px;
-            /* Same as the width of the sidenav */
-            font-size: 20px;
-            /* Increased text to enable scrolling */
-            padding: 0px 10px;
+        .nav a {
+            display:flex;
+            align-items: center;
+            width: fit-content;
+            flex-wrap: wrap;
         }
 
-        /* Add an active class to the active dropdown button */
-        .active {
-            background-color: green;
-            color: white;
+        .nav a img {
+            width: 50px;
         }
 
-        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-        .dropdown-container {
-            display: none;
-            background-color: #262626;
-            padding-left: 8px;
-        }
-
-        /* Optional: Style the caret down icon */
-        .fa-caret-down {
-            float: right;
-            padding-right: 8px;
-        }
-
-        
-        /* Some media queries for responsiveness */
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 18px;
-            }
+        .nav hr {
+            border: 0px;
+            width: 65%;
+            height: 3px;
+            background: #F1F1F1;
         }
     </style>
 </head>
 
 <body>
     <div class="nav">
-        <p>Menu</p>
-        <a href="#main"><img src="icon/main_off.png">메인</a>
-        <button class="dropdown-btn"><img src="icon/ticket_off.png">공연</button>
-        <div class="dropdown-container">
-            <a href="#musical">뮤지컬</a>
-            <a href="#theater">연극</a>
-            <a href="#concert">콘서트</a>
-            <a href="#classic">클래식/무용</a>
-            <a href="#family">아동/가족</a>
-        </div>
-        <a href="#sports"><img src="icon/sport_off.png">스포츠</a>
-        <a href="#art"><img src="icon/art_off.png">미술</a>
-        <a href="#rent"><img src="icon/rent_off.png">대관정보</a>
-        <a href="#artinfo"><img src="icon/info_off.png">예술정보</a>
-        <a href="#local"><img src="icon/local_off.png">대학로</a>
-        <a href="#annoucement"><img src="icon/announce_off.png">공지사항</a>
-        <a href="#total"><img src="icon/total_off.png">전체보기</a>
-        <a href="#mypage"><img src="icon/myinfo_off.png">마이페이지</a>
-        <a href="#bookcheck"><img src="icon/bookcheck_off.png">예매확인/취소</a>
-        <a href="#help"><img src="icon/help_off.png">고객센터</a>
+        <p class="menu">Menu</p>
+        <a href="#main"><img src="icon/main_off.png"><p>메인</p></a>
+        <a href="#performance"><img src="icon/ticket_off.png"><p>공연</p></a>
+        <!-- <div class="dropdown-container">
+            <a href="#musical"><p>뮤지컬</p></a>
+            <a href="#theater"><p>연극</p></a>
+            <a href="#concert"><p>콘서트</p></a>
+            <a href="#classic"><p>클래식/무용</p></a>
+            <a href="#family"><p>아동/가족</p></a>
+        </div> -->
+        <a href="#sports"><img src="icon/sport_off.png"><p>스포츠</p></a>
+        <a href="#art"><img src="icon/art_off.png"><p>미술</p></a>
+        <a href="#rent"><img src="icon/rent_off.png"><p>대관정보</p></a>
+        <a href="#artinfo"><img src="icon/info_off.png"><p>예술정보</p></a>
+        <a href="#local"><img src="icon/local_off.png"><p>대학로</p></a>
+        <a href="#annoucement"><img src="icon/announce_off.png"><p>공지사항</p></a>
+        <a href="#total"><img src="icon/total_off.png"><p>전체보기</p></a>
+        <hr>
+        <a href="#mypage"><img src="icon/myinfo_off.png"><p>마이페이지</p></a>
+        <a href="#bookcheck"><img src="icon/bookcheck_off.png"><p>예매확인/취소</p></a>
+        <a href="#help"><img src="icon/help_off.png"><p>고객센터</p></a>
     </div>
 </body>
 </html>
