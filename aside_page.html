@@ -1,146 +1,78 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
-    <title>Navigator</title>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Amiko', sans-serif;
-            color: black;
-            text-decoration: none;
-        }
+    * {
+  font-family: 'Noto Sans KR', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+}
 
-        .nav {
-            padding-left: 1%;
-            background: #FFFFFF;
-            width: 15%;
-            position: fixed;
-        }
+.image {
+  width: 380px;
+  height: 220px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px 0px 0px 23px;
+  /* border:1px solid black; */
 
-        .menu {
-            padding: 100px 0px 0px 23px;
-            color: #737373; 
-        }
+}
 
-        .nav a p {
-            color: #737373; 
-            font-weight: bold;
-        }
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
 
-        .nav a {
-            display:flex;
-            align-items: center;
-            width: fit-content;
-            flex-wrap: wrap;
-        }
+.name {
+  padding: 100px 0px 0px 23px;
+  color:rgb(40, 40, 40);
+}
 
-        .nav a img {
-            width: 50px;
-        }
+/* 
+.image-box {
+  width:380px;
+  height:220px;
+  overflow:hidden;
+  margin:0 auto;
+}
 
-        .nav hr {
-            border: 0px;
-            width: 65%;
-            height: 3px;
-            background: #F1F1F1;
-        }
+.image-thumbnail {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-        .header {
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            background: #FFFFFF;
-        }
-        
-        .logo img {
-            width: 150px;
-            height: 75px;
-            margin-left: 20px;
-        }
+div {
+  width: 430px;
+  height: 230px;
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  border-radius: 20px;
+} */
 
-        .search {
-            margin-right: 15px;
-            padding: 0px 5px 0px 10px;
-            border-radius: 15px;
-            background-color: #F1F1F1;
-        }
-
-        .search input {
-            width: 450px;
-            height: 45px;
-            border: 0px;
-            outline: 0px;
-            background-color: transparent;
-        }
-
-        .search img {
-            width: 45px;
-            height: 45px;
-        }
-
-        .alarm img {
-           width: 75px;
-           height: 75px;
-        }
-
-        .content-article {
-            width: 70%;
-            padding-top: 20px;
-            padding-left: 17%;
-            padding-right: 2%;
-            padding-bottom: 20px;
-        }
+/* div {
+  width: 430px;
+  height: 230px;
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  border-radius: 20px;
+} */  
     </style>
-</head>
-
-<body>
-    <header class="header">
-        <div class="logo header">
-            <a href="#header"><img src="icon/logo.png"></a>
+    <body>
+        <p class="name">문화정보 <br><br></p>
+        <div class="image">
+            <img src="./1.jpg"> <br><br>
+            <img src="./1.jpg"> <br><br>
+            <img src="./1.jpg">
         </div>
-        <div class="search header">
-            <input type="search">
-            <img src="icon/search.png">
-        </div>
-        <div class="alarm header">
-            <img src="icon/alarm.png">
-        </div>
-    </header>
-    <div class="nav">
-      <p class="menu">Menu</p>
-      <a href="#main"><img src="icon/main_off.png"><p>메인</p></a>
-      <a href="#performance"><img src="icon/ticket_off.png"><p>공연</p></a>
-      <!-- <div class="dropdown-container">
-          <a href="#musical"><p>뮤지컬</p></a>
-          <a href="#theater"><p>연극</p></a>
-          <a href="#concert"><p>콘서트</p></a>
-          <a href="#classic"><p>클래식/무용</p></a>
-          <a href="#family"><p>아동/가족</p></a>
-      </div> -->
-      <a href="#sports"><img src="icon/sport_off.png"><p>스포츠</p></a>
-      <a href="#art"><img src="icon/art_off.png"><p>미술</p></a>
-      <a href="#rent"><img src="icon/rent_off.png"><p>대관정보</p></a>
-      <a href="#artinfo"><img src="icon/info_off.png"><p>예술정보</p></a>
-      <a href="#local"><img src="icon/local_off.png"><p>대학로</p></a>
-      <a href="#annoucement"><img src="icon/announce_off.png"><p>공지사항</p></a>
-      <a href="#total"><img src="icon/total_off.png"><p>전체보기</p></a>
-      <hr>
-      <a href="#mypage"><img src="icon/myinfo_off.png"><p>마이페이지</p></a>
-      <a href="#bookcheck"><img src="icon/bookcheck_off.png"><p>예매확인/취소</p></a>
-      <a href="#help"><img src="icon/help_off.png"><p>고객센터</p></a>
-    </div>
-    <div class="aside">
-        <div class="aside-wrapper">
-            
-        </div>
-    </div>
-</body>
+    </body>
 </html>
