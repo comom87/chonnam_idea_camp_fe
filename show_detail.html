@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
-    <title>Navigator</title>
+    <title>Show Detail</title>
     <style>
         * {
             margin: 0px;
@@ -93,11 +93,135 @@
 
         .content-article {
             width: 70%;
-            padding-top: 20px;
+            padding-top: 10px;
             padding-left: 17%;
             padding-right: 2%;
             padding-bottom: 20px;
         }
+
+        .category-text {
+            display:flex;
+            align-items: center;
+            width: fit-content;
+            flex-wrap: wrap;
+            font-size: 30px;
+            padding-bottom: 4%;
+        }
+
+        .category-icon {
+            width: 60px;
+        }
+
+        .title-info-wrapper {
+            font-size: 30px;
+            padding-bottom: 30px;
+        }
+
+        .detail-content {
+            padding-top: 30px;
+            padding-bottom: 6%;
+            display: flex;
+        }
+
+        .poster-imgbox img {
+            padding-right: 2px;
+            width: 302px;
+        }
+
+        .social-icon-wrapper {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
+        .social-icon-wrapper img {
+            padding-right: 5px;
+            border-color: black;
+            width: 35px;
+        }
+
+        .info-wrapper-middle {
+          padding-right: 2px;
+          width: 400px;
+          flex-wrap: wrap;
+          flex-direction: column; /*수직 정렬*/
+          align-items: center;
+          justify-content: center;
+        }
+
+        .info-wrapper-middle-top {
+          padding-left: 33px;
+          padding-right: 33px;
+        }
+
+        .info-wrapper-middle-line {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 332px;
+            border-color: #737373;
+            opacity: 0.1;
+        }
+        
+        .info-wrapper-middle-bottom {
+          padding-left: 33px;
+          padding-right: 33px;
+        }
+
+        .info-wrapper-right {
+          width: 300px;
+          margin-top: auto;
+          padding-top: 10px;
+          padding-bottom: 65px;
+          text-align: center;
+          font-size: 20pt;
+        }
+
+        .show-date-wrapper img {
+            padding-bottom: 100px;
+            width: 250px;
+        }
+
+        .ticker-redirect {
+          width: 300px;
+        }
+
+        .show-info-wrapper {
+          padding-top: 2%;
+          padding-bottom: 2%;
+        }
+
+        .show-info-title {
+          padding-right: 10%;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .show-info-description {
+          font-size: 16px;
+        }
+
+        .show-info-description-wrapper {
+          padding-top: 5%;
+          padding-bottom: 5%;
+        }
+
+        .show-info-sub-title {
+          padding-right: 5%;
+          font-size: 18px;
+        }
+
+        .show-img-info-title {
+          font-size: 20pt;
+          text-align: center;
+          padding-bottom: 4%;
+        }
+
+        .show-img-info-box {
+          text-align: center;
+          padding-bottom: 2%;
+        }
+
     </style>
 </head>
 
@@ -142,64 +266,89 @@
           <article class="category-title-content">
             <div class="category-info-wrapper">
               <p class="category-info">
-                <a href="#">미술</a>
+                <span class="category-text">미술</a>
+                <span>
+                  <img src="icon/art_on.png" class="category-icon">
+                </span>
               </p>
-              <p></p>
             </div>
             <div class="title-info-wrapper">
-              <p class="big-title-info">Title</p>
+              <p class="big-title-info">[전주][2022 판타지액션 어린이뮤지컬] 더퀸_선덕여왕의 귀환</p>
             </div>
-            <hr>
+            <hr style="height: 2px; background-color: #737373; opacity: 0.7;">
           </article>
           <article class="detail-content">
             <div class="info-wrapper-left">
               <div class="detail-info-wrapper">
                 <div class="poster-imgbox">
-                  <img src="#">
+                  <img src="icon/image_1.jpg">
                 </div>
               </div>
               <div class="social-icon-wrapper">
-                <span class="facebook-icon">
-                  <img src="#">
+                <span class="social-icon">
+                  <img src="LOGIN/img/google.png">
                 </span>
-                <span class="twitter-icon">
-                  <img src="#">
+                <span class="social-icon">
+                  <img src="LOGIN/img/kakao.png">
                 </span>
               </div>
             </div>
             <div class="info-wrapper-middle">
-              <div class="show-info1">
-                <dl>
-                  <dt>제목 </dt>
-                  <dd>temp title</dd>
-                  <dt>장소</dt>
-                  <dd>temp region</dd>
-                  <dt>기간</dt>
-                  <dd>temp date</dd>
-                  <dt>관람시간</dt>
-                  <dd>runtime</dd>
-                </dl>
+              <div class="info-wrapper-middle-top">
+                <div class="show-info1">
+                  <div class="show-info-wrapper">
+                    <span class="show-info-title">제목 </span>
+                    <span class="show-info-description">temp title</span>
+                  </div>
+                  <div class="show-info-wrapper">
+                    <span class="show-info-title">장소 </span>
+                    <span class="show-info-description">temp region</span>
+                  </div>
+                  <div class="show-info-wrapper">
+                    <span class="show-info-title">기간 </span>
+                    <span class="show-info-description">temp date</span>
+                  </div>
+                  <div class="show-info-wrapper">
+                    <span class="show-info-title">기간 </span>
+                    <span class="show-info-description">temp date</span>
+                  </div>
+                </div>
               </div>
-              <hr>
-              <div class="show-info2">
-                <dl>
-                  <dt>가격</dt>
-                  <dd>
-                    <dl>
-                      <dt>최저 가격</dt>
-                      <dd>0원</dd>
-                      <dt>최고 가격</dt>
-                      <dd>100000000원</dd>
-                    </dl>
-                  </dd>
-                </dl>
+              <hr class="info-wrapper-middle-line">
+              <div class="info-wrapper-middle-bottom">
+                <div class="show-info2">
+                  <div class="show-info-wrapper">
+                    <div class="show-info-title">가격</div>
+                    <div class="show-info-description-wrapper">
+                      <div class="show-info-description-price">
+                        <span class="show-info-sub-title">최소 가격: </span>
+                        <span class="show-info-description">0원</span>
+                      </div>
+                      <div class="show-info-description-price">
+                        <span class="show-info-sub-title">최고 가격: </span>
+                        <span class="show-info-description">1000000원</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <hr style="height: 423px; opacity: 0.4;">
             <div class="info-wrapper-right">
-              <a href="#" class="ticker-redirect">예매하기</a>
+              <div class="show-date-wrapper">
+                <img src="icon/calendar.png">
+              </div>
+              <p class="ticker-redirect"><a href="#" >예매하기</a></p>
             </div>
           </article>
-          <article class="imgbox-content">사진</article>
+          <article class="imgbox-content">
+            <div class="show-img-info-wrapper">
+              <div class="show-img-info-title">공연 정보</div>
+              <div class="show-img-info-box">
+                <img src="icon/image_2.jpg" class="info-img">
+              </div>
+            </div>
+          </article>
       </div>
     </div>
 </body>
