@@ -2,43 +2,493 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>공연</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
+    <title>Performance</title>
     <style>
-        #wrap {width: auto; height: auto; margin: 0 ; font-size: 30px; color:#fff; text-align: center; text-transform: uppercase;}
-        .header {width: 1920px; height: 100px; line-height: 100px; background: #ef6c00;}
-        .nav {float: left; width: 250px; height: 2410px; line-height: 600px; background: #fb8c00;}
-        .content1 {float: left; width: 1070px; height: 600px; line-height: 600px; background: pink;}
-        .aside {float: left; width: 600px; height: 2410px; line-height: 600px; background: blue;}
-        .article1 {float: left; width: 1070px; height: 100px; line-height: 600px; background: rgb(242, 126, 255);}
-        .article2 {float: left; width: 1070px; height: 520px; line-height: 600px; background: rgb(108, 186, 231);}
-        .article3 {float: left; width: 1070px; height: 420px; line-height: 600px; background: rgb(233, 205, 210);}
-        .article4 {float: left; width: 1070px; height: 1040px; line-height: 600px; background: rgb(245, 207, 255);}
-        /* .article5 {float: left; width: 1020px; height: 250px; line-height: 600px; background: rgb(233, 205, 210);}
-        .article6 {float: left; width: 1020px; height: 620px; line-height: 600px; background: rgb(189, 249, 217);} */
-        .footer {clear: both; width: 1920px; height: 100px; line-height: 100px; background: #ffb74d;}
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-          }
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Amiko', sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* header */
+        .header {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            background: #FFFFFF;
+            top: 0;
+        }
+        
+        .logo img {
+            width: 150px;
+            height: 75px;
+            margin-left: 20px;
+        }
+
+        .search {
+            margin-right: 15px;
+            padding: 0px 5px 0px 10px;
+            border-radius: 15px;
+            background-color: #F1F1F1;
+        }
+
+        .search input {
+            width: 450px;
+            height: 45px;
+            border: 0px;
+            outline: 0px;
+            background-color: transparent;
+        }
+
+        .search img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .alarm img {
+           width: 75px;
+           height: 75px;
+        }
+
+        /* navigator */
+        .nav {
+            padding-left: 2%;
+            background: #FFFFFF;
+            width: 15%;
+            position: fixed;
+        }
+
+        .menu {
+            padding: 80px 0px 0px 23px;
+            font-size: 13px;
+            color: #737373; 
+        }
+
+        .nav a p {
+            color: #737373; 
+            font-weight: bold;
+        }
+
+        .nav a {
+            display:flex;
+            align-items: center;
+            width: fit-content;
+            flex-wrap: wrap;
+        }
+
+        .nav a img {
+            width: 50px;
+        }
+
+        .nav hr {
+            border: 0px;
+            width: 65%;
+            height: 3px;
+            background: #F1F1F1;
+        }
+
+        /* performance */
+        .performance {
+            background: #FFFFFF;
+            padding-left: 17%;
+            padding-right: 2%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .performance .represent {
+            align-items: center;
+        }
+
+        .performance img {
+            width: 60px;
+        }
+
+        .performance p {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* recommend performance */
+        .recommend-name p {
+            padding: 10px 0px 0px 0px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .recommend-posters {
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .poster {
+            margin-right: 12px;
+            width: fit-content;
+            border: 2px solid #F1F1F1;
+            border-radius: 10px;
+        }
+
+        .poster img {
+            width: 170px;
+            height: 190px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .poster-description {
+            padding: 0px 5px 3px 5px;
+        }
+
+        .poster-description .title {
+            font-size: 13px;
+        }
+
+        .poster-description .date {
+            font-size: 13px;
+            color: #999999;
+            font-weight: normal;
+        }
+        
+        .poster-description .place {
+            font-size: 13px;
+            color: #999999;
+            font-weight: normal;
+        }
+
+        /* ranking */
+        .ranking p {
+            padding: 30px 0px 10px 0px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .ranking-info {
+            width: 70%;
+            padding: 10px 0px 10px 0px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #F1F1F1;
+            border-radius: 10px;
+        }
+
+        .ranking-info img {
+            padding-left: 10px;
+            width: 180px;
+            height: 240px;
+            border-radius: 10px;
+        }
+
+        .ranking-order {
+            padding-left: 20px;
+        }
+
+        .order {
+            display: flex;
+            align-items: center;
+        }
+
+        .order .num {
+            font-size: 28px;
+            font-weight: bold;
+            color: #737373;
+        }
+
+        .order .name {
+            padding-left: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #737373;
+        }
+
+        .order .first-num {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FA4902;
+        }
+
+        .order .first-name {
+            padding-left: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FA4902;
+        }
+
+        /* all */
+        .all p {
+            padding: 30px 0px 10px 0px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .all-list {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 23px;
+        }
+
+        .all-list .poster {
+            margin-right: 0px;
+        }
+
+        .all-list .poster img {
+            padding: 10px 10px 0px 10px;
+        }
+
+        .all-list .poster .poster-description {
+            padding: 0px 10px 3px 10px;
+        }
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <body topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0">
-        <div class="header">header</div>
-        <div class="nav">nav</div>
-        <div class="content1">
-            <article class="article1">공연</article>
-            <article class="article2">추천 공연</article>
-            <article class="article3">랭킹</article>
-            <article class="article4">전체</article>
-            <article class="article5">빠른 스포츠예매</article>
-            <article class="article6">스포츠</article>
+    <!-- header -->
+    <header class="header">
+        <div class="logo header">
+            <a href="#header"><img src="icon/logo.png"></a>
         </div>
-        <div class="aside">aside</div>
-        <div class="footer">footer</div>
+        <div class="search header">
+            <input type="search">
+            <img src="icon/search.png">
+        </div>
+        <div class="alarm header">
+            <img src="icon/alarm.png">
+        </div>
+    </header>
+
+    <!-- navigator -->
+    <div class="nav">
+        <p class="menu">Menu</p>
+        <a href="#main"><img src="icon/main_off.png"><p>메인</p></a>
+        <a href="#performance"><img src="icon/ticket_off.png"><p>공연</p></a>
+        <!-- <div class="dropdown-container">
+            <a href="#musical"><p>뮤지컬</p></a>
+            <a href="#theater"><p>연극</p></a>
+            <a href="#concert"><p>콘서트</p></a>
+            <a href="#classic"><p>클래식/무용</p></a>
+            <a href="#family"><p>아동/가족</p></a>
+        </div> -->
+        <a href="#sports"><img src="icon/sport_off.png"><p>스포츠</p></a>
+        <a href="#art"><img src="icon/art_off.png"><p>미술</p></a>
+        <a href="#rent"><img src="icon/rent_off.png"><p>대관정보</p></a>
+        <a href="#artinfo"><img src="icon/info_off.png"><p>예술정보</p></a>
+        <a href="#local"><img src="icon/local_off.png"><p>대학로</p></a>
+        <a href="#annoucement"><img src="icon/announce_off.png"><p>공지사항</p></a>
+        <a href="#total"><img src="icon/total_off.png"><p>전체보기</p></a>
+        <hr>
+        <a href="#mypage"><img src="icon/myinfo_off.png"><p>마이페이지</p></a>
+        <a href="#bookcheck"><img src="icon/bookcheck_off.png"><p>예매확인/취소</p></a>
+        <a href="#help"><img src="icon/help_off.png"><p>고객센터</p></a>
+    </div>
+
+    <!-- performance -->
+    <div class="performance">
+        <div class="represent content">
+            <p>공연</p>
+            <img src="icon/ticket_on.png">
+        </div>
+        <div class="recommend">
+            <div class="recommend-name">
+                <p>추천 공연</p>
+            </div>
+            <div class="recommend-posters">
+                <div class="poster">
+                    <a href="#detail">
+                    <img src="icon/performance.png">
+                    <div class="poster-description">
+                        <p class="title">탑건</p>
+                        <p class="date">2022.11.05 ~ 2022.11.05</p>
+                        <p class="place">광안리해수욕장</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="poster">
+                    <a href="#detail">
+                    <img src="icon/performance.png">
+                    <div class="poster-description">
+                        <p class="title">탑건</p>
+                        <p class="date">2022.11.05 ~ 2022.11.05</p>
+                        <p class="place">광안리해수욕장</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="poster">
+                    <a href="#detail">
+                    <img src="icon/performance.png">
+                    <div class="poster-description">
+                        <p class="title">탑건</p>
+                        <p class="date">2022.11.05 ~ 2022.11.05</p>
+                        <p class="place">광안리해수욕장</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="poster">
+                    <a href="#detail">
+                    <img src="icon/performance.png">
+                    <div class="poster-description">
+                        <p class="title">탑건</p>
+                        <p class="date">2022.11.05 ~ 2022.11.05</p>
+                        <p class="place">광안리해수욕장</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="poster">
+                    <a href="#detail">
+                    <img src="icon/performance.png">
+                    <div class="poster-description">
+                        <p class="title">탑건</p>
+                        <p class="date">2022.11.05 ~ 2022.11.05</p>
+                        <p class="place">광안리해수욕장</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ranking">
+            <p>랭킹</p>
+        </div>
+        <div class="ranking-info"> 
+            <img src="icon/performance.png">
+            <div class="ranking-order">
+                <div class="order">
+                    <p class="first-num">1</p>
+                    <p class="first-name">엘리자벳</p>
+                </div>
+                <div class="order">
+                    <p class="num">2</p>
+                    <p class="name">서편제</p>
+                </div>
+                <div class="order">
+                    <p class="num">3</p>
+                    <p class="name">웃는남자</p>
+                </div>
+                <div class="order">
+                    <p class="num">4</p>
+                    <p class="name">마타하리</p>
+                </div>
+                <div class="order">
+                    <p class="num">5</p>
+                    <p class="name">미세스 다웃파이어</p>
+                </div>
+            </div>
+        </div>
+        <div class="all">
+            <p>전체</p>
+        </div>
+        <div class="all-list">
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+            <div class="poster">
+                <a href="#detail">
+                <img src="icon/performance.png">
+                <div class="poster-description">
+                    <p class="title">탑건</p>
+                    <p class="date">2022.11.05 ~ 2022.11.05</p>
+                    <p class="place">광안리해수욕장</p>
+                </div>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
